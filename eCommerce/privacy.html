@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAPPU VEGETABLES</title>
+  <link rel="icon" type="image/png" href="Pappu Vegetables2.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 6px;
+      border-radius: 5px;
+    }
+    
+    h1 span {
+      color: #fff;
+    }
+    
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #008000;
+    }
+
+h5 {
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 4px;
+      border-radius: 5px;
+    }
+    
+    h5 span {
+      color: #fff;
+    }
+h5 {
+      margin-top: 30px;
+      margin-bottom: 7px;
+      font-size: 24px;
+      color: "#fff";
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .vegetable {
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .vegetable:hover {
+      transform: scale(1.05);
+    }
+    
+    .vegetable img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .vegetable h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #008000;
+      text-transform: capitalize;
+    }
+    
+    .vegetable p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .vegetable .price {
+      font-weight: bold;
+      color: #008000;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .vegetable .name {
+      color: #ff0000; /* Change the color to your desired color */
+    }
+  
+
+   
+    .order-now-button {
+      display: inline-block;
+      background-color: #3E915E;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+font-weight: bold; 
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .modal-content p {
+      margin-bottom: 10px;
+    }
+
+    .modal-content button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+    }
+
+
+   .contact-section {
+      margin-top: 10px;
+    }
+
+    .address {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .open-hours {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+    }
+
+    .open-button {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+
+    .closed-button {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .map-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+      background-image: url("https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1639808900736.jpg-org");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 85px;
+      height: 23px;
+    }
+ .remarks {
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+
+    nav {
+			background-color: #FFFFFF;
+			border: 1px solid #006400;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      min-width: 90%;
+		}
+		nav a {
+			float: left;
+			color: #006400;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background-color 0.3s;
+		}
+		nav a:hover {
+			background-color: #006400;
+			color: #FFFFFF;
+		}
+    .terms-copy {
+      text-align: center;
+      margin-top: 20px;
+    }
+	
+  </style>
+</head>
+<body>
+ 
+ 
+<a href="home.html"><img src="Pappu Vegetables2.png" alt="Pappu Vegetables" alt="PAPPU VEGETABLES LOGO" class="logo"></a>
+
+
+
+  <h1>PAPPU VEGETABLES</h1>
+  <nav>
+<a href="home.html">Home</a>	
+	
+<a href="process.html">Ordering Procedure</a>		
+		
+<a href="payment.html">Modes of  Payment</a>
+		
+<a href="support.html">Customer Support</a>
+		
+<a href="refunds.html">Refunds and Returns</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="notice.html">Notice</a>
+
+<a href="aboutus.html">About Us</a>
+	</nav>
+
+
+
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Privacy Policy</title>
+</head>
+<body>
+    <h1>Privacy Policy</h1>
+    <p>Your privacy is important to us. This privacy policy explains how we collect, use, and protect your personal information when you use our vegetable selling website. We adhere to the Indian market standards to ensure your trust and protection. Please read this privacy policy carefully:</p>
+    
+    <h2>1. Information We Collect</h2>
+    <p>We collect the following types of personal information:</p>
+    <ul>
+        <li>Your name, contact details (address, phone number, and email address), and payment information (UPI ID) when you place an order.</li>
+        <li>Information related to your order history, preferences, and interactions with our website.</li>
+        <li>Information collected through cookies and similar technologies to enhance your browsing experience.</li>
+    </ul>
+    
+    <h2>2. Use of Information</h2>
+    <p>We use your personal information for the following purposes:</p>
+    <ul>
+        <li>To process and fulfill your orders, including delivery/pickup of vegetables.</li>
+        <li>To communicate with you regarding your orders, promotions, and updates about our services.</li>
+        <li>To improve our website, services, and customer experience.</li>
+        <li>To analyze and understand customer preferences and trends to enhance our offerings.</li>
+        <li>To comply with legal and regulatory requirements.</li>
+    </ul>
+    
+    <h2>3. Data Security</h2>
+    <p>We implement reasonable security measures to protect your personal information:</p>
+    <ul>
+        
+        <li>We restrict access to personal information to authorized personnel only.</li>
+        <li>We regularly monitor and update our security practices to ensure the safety of your information.</li>
+    </ul>
+    
+    <h2>4. Sharing of Information</h2>
+    <p>We may share your personal information with third parties in the following circumstances:</p>
+    <ul>
+        <li>With our trusted delivery partners/ our employees to facilitate the delivery of your orders.</li>
+        <li>With our payment gateway provider to process your payments securely.</li>
+        <li>With our business partners for marketing and promotional purposes, subject to your consent.</li>
+        <li>With legal authorities to comply with applicable laws, regulations, or legal processes.</li>
+    </ul>
+    
+    <h2>5. Your Rights and Choices</h2>
+    <p>You have the following rights regarding your personal information:</p>
+    <ul>
+        <li>Access: You can request access to the personal information we hold about you.</li>
+        <li>Correction: You can request correction of any inaccurate or incomplete personal information.</li>
+        <li>Deletion: You can request deletion of your personal information, subject to legal obligations.</li>
+        <li>Opt-out: You can opt-out of receiving promotional communications from us.</li>
+    </ul> Please note that we are accepting orders throught WhatsApp/Call/SMS/Email so we do not collect much of informations.
+    
+    <h2>6. Contact Information</h2>
+    <p>If you have any questions or concerns regarding our privacy policy, please contact us using the following information:</p>
+    <ul>
+        <li>Email: imd43764@gmail.com</li><br>
+        <li>Phone: +91 98308 36212</li><br>
+
+<p>Please note that our privacy policy is subject to change without prior notice. By placing an order on our website, you acknowledge that you have read, understood, and agreed to our privacy policy and <a href="terms.html">terms & conditions.</a></p>
+<div class="terms-copy">&copy I. Farhat, Farhat e Services & Assistance<br>
+</div>    
+</body>
+    </html>

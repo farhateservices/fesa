@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAPPU VEGETABLES</title>
+  <link rel="icon" type="image/png" href="Pappu Vegetables2.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 6px;
+      border-radius: 5px;
+    }
+    
+    h1 span {
+      color: #fff;
+    }
+    
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #008000;
+    }
+
+h5 {
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 4px;
+      border-radius: 5px;
+    }
+    
+    h5 span {
+      color: #fff;
+    }
+h5 {
+      margin-top: 30px;
+      margin-bottom: 7px;
+      font-size: 24px;
+      color: "#fff";
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .vegetable {
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .vegetable:hover {
+      transform: scale(1.05);
+    }
+    
+    .vegetable img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .vegetable h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #008000;
+      text-transform: capitalize;
+    }
+    
+    .vegetable p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .vegetable .price {
+      font-weight: bold;
+      color: #008000;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .vegetable .name {
+      color: #ff0000; /* Change the color to your desired color */
+    }
+    .order-now-button {
+      display: inline-block;
+      background-color: #3E915E;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+font-weight: bold; 
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .modal-content p {
+      margin-bottom: 10px;
+    }
+
+    .modal-content button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+    }
+   .contact-section {
+      margin-top: 10px;
+margin-left: 10px;
+    }
+
+    .address {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .open-hours {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+    }
+    .open-button {
+      background-color: #4CAF50;
+      color: #ffffff;
+width: 85px;
+      height: 23px;
+font-size: 24px;
+    }
+    .closed-button {
+      background-color: #ffffff;
+      color: #000000;
+width: 85px;
+      height: 23px;
+font-size: 24px;
+    }
+    .map-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+      background-image: url("mapbutton.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 85px;
+      height: 23px;
+    }
+ .remarks {
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+
+nav {
+			background-color: #FFFFFF;
+			border: 1px solid #006400;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+		nav a {
+			float: left;
+			color: #006400;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background-color 0.3s;
+		}
+		nav a:hover {
+			background-color: #006400;
+			color: #FFFFFF;
+		}
+	</style>
+</head>
+<body>
+<img src="Pappu Vegetables2.png" alt="Pappu Vegetables" alt="PAPPU VEGETABLES LOGO" class="logo">
+<h1>PAPPU VEGETABLES</h1>
+ <h5>We accept Catering, Hotel, Party, Wedding & all other Occasional orders. Operating 364 days a year</h5>
+<!--<h5>Site in testing phase do not launch or publish without permission from owner/author I. Farhat, Founder, Farhat e Services & Assistance</h5>
+-->
+<p align="center"><strong>Disclaimer:</strong> This site is for demonstration only; no orders or payments are valid. We hold no liability for associated losses. For inquiries or other requests, contact me at farhateservices.in@gmail.com.</p>
+<nav>
+<a href="home.html">Home</a>		
+<a href="process.html">Ordering Procedure</a>				
+<a href="payment.html">Modes of  Payment</a>		
+<a href="support.html">Customer Support</a>		
+<a href="refunds.html">Refunds and Returns</a>
+<a href="terms.html">Terms & Conditions</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="notice.html">Notice</a>
+<a href="aboutus.html">About Us</a>
+	</nav>
+<!DOCTYPE html, writing again to make the appearance same and avoid writing of css again>
+<html>
+<head>
+  <title>Pappu Vegetables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .item {
+      width: 250px;
+      margin-bottom: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .item h3 {
+      margin-top: 0;
+    }
+    .item img {
+width: 250px;
+height: 250px;
+      margin-bottom: 10px;
+    }
+    .item .input-group {
+      display: flex;
+    }
+    .item .input-group input[type="number"],
+    .item .input-group select {
+      flex: 1;
+      padding: 5px;
+      margin-right: 10px;
+ color: #000000;
+  background-color: #fff;
+border: 1px solid #000000;
+      border-radius: 5px;
+    }
+    .item .add-to-cart {
+      margin-top: 10px;
+border: 1px solid #000000;
+font-size: 20px;
+color: #fff;
+background-color: #379815;
+width: 243px;
+height: 30px;
+    }
+    #cart {
+      margin-top: 20px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 20px;
+ background-color: #f4fdf4;
+ border: 1.5px solid #000000;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 2000px;
+    }
+    #cart h2 {
+      margin-top: 0;
+    }
+    #cart ul {
+      padding: 0;
+    }
+    #cart li {
+      list-style-type: none;
+      margin-bottom: 10px;
+    }
+    #cart li span {
+      margin-right: 10px;
+    }
+    #cart .total {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .orderButton {
+ background-color: #379815;
+ 
+color: #ffffff;
+font-size: 30px;
+      margin-top: 20px;
+border-radius: 8px;
+    }
+    .removeButton {
+      color: red;
+      cursor: pointer;
+    }
+    #myCartButton {
+position: fixed;
+      top: 50px;
+      right: 30px;
+      padding: 15px;
+      background-color: #379815;
+      color: #fff;
+      border: 5px solid #e9fcc9;
+      border-radius: 12px;
+      cursor: 1px;
+      z-index: 999;
+font-size: 21px;
+    }
+    #myCartContainer {
+margin-top: 20px;
+margin-right: 20px;
+margin-left: 20px;
+margin-bottom: 20px;
+      padding: 20px;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f4fdf4;
+      padding: 20px;
+      border: 1.5px solid #000000;
+      border-radius: 8px;
+      z-index: 999;
+     max-width: 2000px;
+	
+    }
+    #myCartContainer h2 {
+      margin-top: 0;
+    }
+    #myCartContainer .closeButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px;
+      background-color: red;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+.terms {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+.item .add-to-cart {
+  margin-top: 10px;
+  border: 1px solid #000000;
+
+      border-radius: 8px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #379815;
+  width: 243px;
+  height: 35px;
+}
+
+.add-to-cart,
+#myCartButton,
+.orderButton {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  
+  <button id="myCartButton" onclick="toggleCart()"><strong>My Cart</strong></button>
+  <div class="container">
+  
+<div class="item">
+  <h3>Potato/Aaloo</h3>
+  <img src="1.png" alt="Potato/Aaloo">
+  <p>Price: 22/kg</p>
+  <div class="input-group">
+    <input type="number" id="potatoesQuantity" placeholder="Enter quantity">
+    <select id="potatoesUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Potato/Aaloo', 'potatoesQuantity', 'potatoesUnit', 22)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Onion/Pyaaj</h3>
+  <img src="2.png" alt="Onion/Pyaaj">
+  <p>Price: 30/kg</p>
+  <div class="input-group">
+    <input type="number" id="onionQuantity" placeholder="Enter quantity">
+    <select id="onionUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Onion/Pyaaj', 'onionQuantity', 'onionUnit', 30)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Pumpkin/Kowra</h3>
+  <img src="3.png" alt="Pumpkin/Kowra">
+  <p>Price: 30/kg</p>
+  <div class="input-group">
+    <input type="number" id="pumpkinQuantity" placeholder="Enter quantity">
+    <select id="pumpkinUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Pumpkin/Kowra', 'pumpkinQuantity', 'pumpkinUnit', 30)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Ginger/Adrak</h3>
+  <img src="4.png" alt="Ginger/Adrak">
+  <p>Price: 300/kg</p>
+  <div class="input-group">
+    <input type="number" id="gingerQuantity" placeholder="Enter quantity">
+    <select id="gingerUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Ginger/Adrak', 'gingerQuantity', 'gingerUnit', 300)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Garlic/Lasan</h3>
+  <img src="5.png" alt="Garlic/Lasan">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="garlicQuantity" placeholder="Enter quantity">
+    <select id="garlicUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Garlic/Lasan', 'garlicQuantity', 'garlicUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Lemon/Nimbu #</h3>
+  <img src="6.png" alt="Lemon/Nimbu #">
+  <p>Price: 5/piece</p>
+  <div class="input-group">
+    <input type="number" id="lemonQuantity" placeholder="Enter quantity">
+    <select id="lemonUnit">
+      <option value="piece">piece</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Lemon/Nimbu #', 'lemonQuantity', 'lemonUnit', 5)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Green Chilli/Hari Mirch</h3>
+  <img src="7.png" alt="Green Chilli/Hari Mirch">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="greenChilliQuantity" placeholder="Enter quantity">
+    <select id="greenChilliUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Green Chilli/Hari Mirch', 'greenChilliQuantity', 'greenChilliUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Big Green Chilli/Badi Hari Mirch</h3>
+  <img src="8.png" alt="Big Green Chilli/Badi Hari Mirch">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="bigGreenChilliQuantity" placeholder="Enter quantity">
+    <select id="bigGreenChilliUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Big Green Chilli/Badi Hari Mirch', 'bigGreenChilliQuantity', 'bigGreenChilliUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Coriander Leaves/Dhaniya Patta</h3>
+  <img src="9.png" alt="Coriander Leaves/Dhaniya Patta">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="corianderLeavesQuantity" placeholder="Enter quantity">
+    <select id="corianderLeavesUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Coriander Leaves/Dhaniya Patta', 'corianderLeavesQuantity', 'corianderLeavesUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Mint Leaves/Pudina Patta</h3>
+  <img src="10.png" alt="Mint Leaves/Pudina Patta">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="mintLeavesQuantity" placeholder="Enter quantity">
+    <select id="mintLeavesUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Mint Leaves/Pudina Patta', 'mintLeavesQuantity', 'mintLeavesUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Cabbage/Patta Gobi/Band Gobi</h3>
+  <img src="39.png" alt="Cabbage/Patta Gobi/Band Gobi">
+  <p>Price: 40/kg</p>
+  <div class="input-group">
+    <input type="number" id="cabbageQuantity" placeholder="Enter quantity">
+    <select id="cabbageUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Cabbage/Patta Gobi/Band Gobi', 'cabbageQuantity', 'cabbageUnit', 40)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Barbati</h3>
+  <img src="13.png" alt="Barbati">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="barbatiQuantity" placeholder="Enter quantity">
+    <select id="barbatiUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Barbati', 'barbatiQuantity', 'barbatiUnit', 25)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Bottle Gourd/Lauki #</h3>
+  <img src="14.png" alt="Bottle Gourd/Lauki">
+  <p>Price: 30/piece</p>
+  <div class="input-group">
+    <input type="number" id="bottleGourdQuantity" placeholder="Enter quantity">
+    <select id="bottleGourdUnit">
+      <option value="kg">piece</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Bottle Gourd/Lauki #', 'bottleGourdQuantity', 'bottleGourdUnit', 30)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Drum Stick/Danta/Sahjan</h3>
+  <img src="15.png" alt="Drum Stick/Danta/Sahjan">
+  <p>Price: 100/kg</p>
+  <div class="input-group">
+    <input type="number" id="moringaQuantity" placeholder="Enter quantity">
+    <select id="moringaUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Drum Stick/Danta/Sahjan', 'moringaQuantity', 'moringaUnit', 100)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Tara Root/Arbi</h3>
+  <img src="16.png" alt="Tara Root/Arbi">
+  <p>Price: 50/kg</p>
+  <div class="input-group">
+    <input type="number" id="taraRootQuantity" placeholder="Enter quantity">
+    <select id="taraRootUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Tara Root/Arbi', 'taraRootQuantity', 'taraRootUnit', 50)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Beetroot/Beet</h3>
+  <img src="17.png" alt="Beetroot/Beet">
+  <p>Price: 50/kg</p>
+  <div class="input-group">
+    <input type="number" id="beetQuantity" placeholder="Enter quantity">
+    <select id="beetUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Beetroot/Beet', 'beetQuantity', 'beetUnit', 20)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Tinda</h3>
+  <img src="18.png" alt="Tinda">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="tindaQuantity" placeholder="Enter quantity">
+    <select id="tindaUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Tinda', 'tindaQuantity', 'tindaUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Tomato/Tamatar</h3>
+  <img src="19.png" alt="Tomato/Tamatar">
+  <p>Price: 140/kg</p>
+  <div class="input-group">
+    <input type="number" id="tomatoQuantity" placeholder="Enter quantity">
+    <select id="tomatoUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Tomato/Tamatar', 'tomatoQuantity', 'tomatoUnit', 140)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Carrot/Gajar</h3>
+  <img src="20.png" alt="Carrot/Gajar">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="carrotQuantity" placeholder="Enter quantity">
+    <select id="carrotUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Carrot/Gajar', 'carrotQuantity', 'carrotUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Cucumber/Kheera</h3>
+  <img src="21.png" alt="Cucumber/Kheera">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="cucumberQuantity" placeholder="Enter quantity">
+    <select id="cucumberUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Cucumber/Kheera', 'cucumberQuantity', 'cucumberUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Beans</h3>
+  <img src="22.png" alt="Beans">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="beansQuantity" placeholder="Enter quantity">
+    <select id="beansUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Beans', 'beansQuantity', 'beansUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Capsicum/Shimla Mirch</h3>
+  <img src="23.png" alt="Capsicum/Shimla Mirch">
+  <p>Price: 200/kg</p>
+  <div class="input-group">
+    <input type="number" id="capsicumQuantity" placeholder="Enter quantity">
+    <select id="capsicumUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Capsicum/Shimla Mirch', 'capsicumQuantity', 'capsicumUnit', 200)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Ridge Gourd/Toru</h3>
+  <img src="24.png" alt="Ridge Gourd/Toru">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="ridgeGourdQuantity" placeholder="Enter quantity">
+    <select id="ridgeGourdUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Ridge Gourd/Toru', 'ridgeGourdQuantity', 'ridgeGourdUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Raw Green Mango/Kaccha Aam</h3>
+  <img src="25.png" alt="Raw Green Mango/Kaccha Aam">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="mangoQuantity" placeholder="Enter quantity">
+    <select id="mangoUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Raw Green Mango/Kaccha Aam', 'mangoQuantity', 'mangoUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+
+<div class="item">
+  <h3>Lady's Finger/Bhindi</h3>
+  <img src="27.png" alt="Lady's Finger/Bhindi">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="ladyFingerQuantity" placeholder="Enter quantity">
+    <select id="ladyFingerUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Ladys Finger/Bhindi', 'ladyFingerQuantity', 'ladyFingerUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+
+
+<div class="item">
+  <h3>Bitter Gourd/Karela</h3>
+  <img src="29.png" alt="Bitter Gourd/Karela">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="bitterGourdQuantity" placeholder="Enter quantity">
+    <select id="bitterGourdUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Bitter Gourd/Karela', 'bitterGourdQuantity', 'bitterGourdUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Spiny Gourd/Kheksa</h3>
+  <img src="30.png" alt="Spiny Gourd/Kheksa">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="spinyGourdQuantity" placeholder="Enter quantity">
+    <select id="spinyGourdUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Spiny Gourd/Kheksa', 'spinyGourdQuantity', 'spinyGourdUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Raw Green Banana/Kaccha Kela #</h3>
+  <img src="31.png" alt="Raw Green Banana/Kaccha Kela #">
+  <p>Price: 8/piece</p>
+  <div class="input-group">
+    <input type="number" id="bananaQuantity" placeholder="Enter quantity">
+    <select id="bananaUnit">
+      <option value="kg">piece</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Raw Green Banana/Kaccha Kela #', 'bananaQuantity', 'bananaUnit', 8)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Brinjal/Baigan (Chhota)</h3>
+  <img src="32.png" alt="Brinjal/Baigan (Chhota)">
+  <p>Price: 50/kg</p>
+  <div class="input-group">
+    <input type="number" id="brinjalSmallQuantity" placeholder="Enter quantity">
+    <select id="brinjalSmallUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Brinjal/Baigan (Chhota)', 'brinjalSmallQuantity', 'brinjalSmallUnit', 50)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Brinjal/Baigan (Bada)</h3>
+  <img src="33.png" alt="Brinjal/Baigan (Bada)">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="brinjalLargeQuantity" placeholder="Enter quantity">
+    <select id="brinjalLargeUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Brinjal/Baigan (Bada)', 'brinjalLargeQuantity', 'brinjalLargeUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>White/Light Green Brinjal/Hara/Sada Baigan (Bada)</h3>
+  <img src="34.png" alt="White/Light Green Brinjal/Hara/Sada Baigan (Bada)">
+  <p>Price: 60/kg</p>
+  <div class="input-group">
+    <input type="number" id="brinjalWhiteQuantity" placeholder="Enter quantity">
+    <select id="brinjalWhiteUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('White/Light Green Brinjal/Hara/Sada Baigan (Bada)', 'brinjalWhiteQuantity', 'brinjalWhiteUnit', 60)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Nenua</h3>
+  <img src="35.png" alt="Nenua">
+  <p>Price: 40/kg</p>
+  <div class="input-group">
+    <input type="number" id="nenuaQuantity" placeholder="Enter quantity">
+    <select id="nenuaUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Nenua', 'nenuaQuantity', 'nenuaUnit', 40)"><strong>Add to Cart</strong></button>
+</div>
+
+<div class="item">
+  <h3>Raw Green Papaya/Kacha Papita</h3>
+  <img src="37.png" alt="Raw Green Papaya/Kacha Papita">
+  <p>Price: 40/kg</p>
+  <div class="input-group">
+    <input type="number" id="papayaQuantity" placeholder="Enter quantity">
+    <select id="papayaUnit">
+      <option value="kg">kg</option>
+      <option value="g">g</option>
+    </select>
+  </div>
+  <button class="add-to-cart" onclick="addToCart('Raw Green Papaya/Kacha Papita', 'papayaQuantity', 'papayaUnit', 40)"><strong>Add to Cart</strong></button>
+</div>
+<!-- Add more items after this in future if req.-->
+  </div>
+  
+  <div id="cart">
+    <h2>My Cart</h2>
+items with # indicates for those perticular items kg=piece<br>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: <span id="totalAmount">0</span></p>
+    <button class="orderButton" onclick="sendOrder('whatsapp')"><strong>Order via WhatsApp</strong></button>
+    <button class="orderButton" onclick="sendOrder('email')"><strong>Order via Email</strong></button>
+  </div>
+
+  <div id="myCartContainer">
+    <button class="closeButton" onclick="toggleCart()"><strong>Close</strong></button>
+    <h2>My Cart</h2>
+items with # indicates for those perticular items kg=piece<br>
+    <ul id="myCartItems"></ul>
+    <p class="total">Total: <span id="myCartTotalAmount">0</span></p>
+    <button class="orderButton" onclick="sendOrder('whatsapp')"><strong>Order via WhatsApp</strong></button>
+    <button class="orderButton" onclick="sendOrder('email')"><strong>Order via Email</strong></button>
+  </div>
+  <p align="center"><strong>Disclaimer:</strong> This site is for demonstration only; no orders or payments are valid. We hold no liability for associated losses. For inquiries or other requests, contact me at farhateservices.in@gmail.com.</p>  <script>
+let cart = [];
+
+    function addToCart(itemName, quantityId, unitId, pricePerKg, pricePerP ) {
+      const quantityInput = document.getElementById(quantityId);
+      const unitSelect = document.getElementById(unitId);
+      
+      const quantity = quantityInput.value ? parseFloat(quantityInput.value) : 0;
+      const unit = unitSelect.value;
+      
+      let convertedQuantity = quantity;
+      
+      if (unit === 'g') {
+        convertedQuantity = quantity / 1000;
+      }
+      
+      if (convertedQuantity > 0) {
+        const existingItem = cart.find(item => item.name === itemName);
+        
+        if (existingItem) {
+          existingItem.quantity += convertedQuantity;
+        } else {
+          const item = {
+            name: itemName,
+            quantity: convertedQuantity,
+            pricePerKg: pricePerKg
+          };
+          
+          cart.push(item);
+        }
+        
+        quantityInput.value = '';
+        unitSelect.value = 'kg';
+        updateCart();
+      }
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCart();
+    }
+    function updateCart() {
+      const cartItems = document.getElementById('cartItems');
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        const itemTotal = item.quantity * item.pricePerKg;
+        listItem.innerHTML = `<strong>${item.name}</strong>: ${item.quantity.toFixed(2)} kg - ${itemTotal.toFixed(2)} <span class="removeButton" onclick="removeItem(${index})">Remove</span>`;
+        cartItems.appendChild(listItem);
+        total += itemTotal;
+      });
+      const totalAmount = document.getElementById('totalAmount');
+      totalAmount.textContent = total.toFixed(2);
+      const myCartItems = document.getElementById('myCartItems');
+      myCartItems.innerHTML = '';
+      let myCartTotal = 0;
+      cart.forEach((item, index) => {
+        const existingCartItem = myCartItems.querySelector(`li[data-index="${index}"]`);
+
+        if (existingCartItem) {
+          const existingQuantity = parseFloat(existingCartItem.dataset.quantity);
+          const newQuantity = existingQuantity + item.quantity;
+          existingCartItem.dataset.quantity = newQuantity;
+          existingCartItem.innerHTML = `<strong>${item.name}</strong>: ${newQuantity.toFixed(2)} kg - ${item.pricePerKg * newQuantity.toFixed(2)} <span class="removeButton" onclick="removeItem(${index})">Remove</span>`;
+        } else {
+          const listItem = document.createElement('li');
+          listItem.dataset.index = index;
+          listItem.dataset.quantity = item.quantity;
+          listItem.innerHTML = `<strong>${item.name}</strong>: ${item.quantity.toFixed(2)} kg - ${item.pricePerKg * item.quantity.toFixed(2)} <span class="removeButton" onclick="removeItem(${index})">Remove</span>`;
+          myCartItems.appendChild(listItem);
+        }
+        myCartTotal += item.pricePerKg * item.quantity;
+      });
+      const myCartTotalAmount = document.getElementById('myCartTotalAmount');
+      myCartTotalAmount.textContent = myCartTotal.toFixed(2);
+    }
+    function toggleCart() {
+      const myCartContainer = document.getElementById('myCartContainer');
+      myCartContainer.style.display = myCartContainer.style.display === 'none' ? 'block' : 'none';
+      updateCart();
+    }
+  function sendOrder(method) {
+  const totalAmount = document.getElementById('totalAmount').textContent;
+  const message = `Order Details:\n\n${getCartItemsText()}\nTotal: ${totalAmount}`;
+
+  if (method === 'whatsapp') {
+    const formattedMessage = encodeURIComponent(message);
+    const url = `https://api.whatsapp.com/send?phone=+919830836212&text=${formattedMessage}`;
+    window.open(url, '_blank');
+  } else if (method === 'email') {
+    const email = 'imd43764@gmail.com';
+    const subject = 'Order Details';
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+    window.location.href = mailtoLink;
+  }
+}
+    function getCartItemsText() {
+      let itemsText = '';
+      cart.forEach((item, index) => {
+        const itemTotal = item.quantity * item.pricePerKg;
+        itemsText += `${index + 1}. ${item.name}: ${item.quantity.toFixed(2)} kg - ${itemTotal.toFixed(2)}\n`;
+      });
+      return itemsText;
+    }
+</script>
+</body><br>
+ <p align="right"  class="remarks"><b># indicates that items are sold @ per piece but cart & order details might show 'piece' as 'kg' but it will mean 'piece' only</p></b>
+<div class="terms">
+    <p>By placing an order online through our website, you agree to our <a href="terms.html">terms and conditions</a>.</p>
+<p>All prices/rates/figures on our website is in INR.</p>
+  </div>
+ <!-- Contact Us section -->
+<div class="contact-section">
+  <b> <p style="font-size:25px" class="address">Contact us:</b></p>
+ <b> <p class="address">Evening Shop Address : </b>Adress Line 1, City, State, India, Pin Code</p>
+    <a href="#" class="map-button"></a><br>
+<b><p class="open-hours"> Evening Shop Opening Hours :</b> 03:00 PM - 10:00 PM</p>
+    <div id="status">
+      <script>
+        var currentHour = new Date().getHours();
+        var openingHour = 15;
+        var closingHour = 22;
+
+        if (currentHour >= openingHour && currentHour < closingHour) {
+          document.getElementById("status").innerHTML = '<a href="#" class="button open-button">Open</a>';
+        } else {
+          document.getElementById("status").innerHTML = '<a href="#" class="button closed-button">Closed</a>';
+        } 
+      </script>
+    </div>
+  <b> <p class="address">Our Email :</b> imd43764@gmail.com</p>
+<b> <p class="address">Our Phone :</b> +91 98303 36212</p>
+<b> <p class="address">For any grievience/feedback </b><a href="support.html">contact our customer support</a></p><br>
+</div>
+<div class="terms">&copy I. Farhat, Farhat e Services & Assistance<br><br>
+  </div>
+</html>

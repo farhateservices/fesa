@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PAPPU VEGETABLES</title>
+  <link rel="icon" type="image/png" href="Pappu Vegetables2.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      font-size: 38px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 6px;
+      border-radius: 5px;
+    }
+    
+    h1 span {
+      color: #fff;
+    }
+    
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #008000;
+    }
+
+h5 {
+      text-align: center;
+      font-size: 12px;
+      color: #fff;
+      
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      background-color: #379815; /* Add your desired background color */
+      padding: 4px;
+      border-radius: 5px;
+    }
+    
+    h5 span {
+      color: #fff;
+    }
+h5 {
+      margin-top: 30px;
+      margin-bottom: 7px;
+      font-size: 24px;
+      color: "#fff";
+    }
+    
+    .section {
+      margin-bottom: 40px;
+    }
+    
+    .vegetable {
+      display: inline-block;
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .vegetable:hover {
+      transform: scale(1.05);
+    }
+    
+    .vegetable img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .vegetable h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #008000;
+      text-transform: capitalize;
+    }
+    
+    .vegetable p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .vegetable .price {
+      font-weight: bold;
+      color: #008000;
+    }
+
+    .logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .vegetable .name {
+      color: #ff0000; /* Change the color to your desired color */
+    }
+  
+
+   
+    .order-now-button {
+      display: inline-block;
+      background-color: #3E915E;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 24px;
+font-weight: bold; 
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+
+
+
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .modal-content p {
+      margin-bottom: 10px;
+    }
+
+    .modal-content button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 4px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+    }
+
+
+   .contact-section {
+      margin-top: 10px;
+    }
+
+    .address {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .open-hours {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+    }
+
+    .open-button {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+
+    .closed-button {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .map-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      margin-right: 10px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      border: 1px solid #000000;
+      background-image: url("https://ngs-space1.sgp1.digitaloceanspaces.com/am/uploads/mediaGallery/image/1639808900736.jpg-org");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 85px;
+      height: 23px;
+    }
+ .remarks {
+      font-size: 18px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+
+    nav {
+			background-color: #FFFFFF;
+			border: 1px solid #006400;
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 20px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      min-width: 90%;
+		}
+		nav a {
+			float: left;
+			color: #006400;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background-color 0.3s;
+		}
+		nav a:hover {
+			background-color: #006400;
+			color: #FFFFFF;
+		}
+    .terms-copy {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+
+</head>
+<body>
+ 
+ 
+<a href="home.html"><img src="Pappu Vegetables2.png" alt="Pappu Vegetables" alt="PAPPU VEGETABLES LOGO" class="logo"></a>
+
+
+
+  <h1>PAPPU VEGETABLES</h1>
+  <p align="center"><strong>Disclaimer:</strong> This site is for demonstration only; no orders or payments are valid. We hold no liability for associated losses. For inquiries or other requests, contact me at farhateservices.in@gmail.com.</p>   <nav>
+<a href="home.html">Home</a>	
+	
+<a href="process.html">Ordering Procedure</a>		
+		
+<a href="payment.html">Modes of  Payment</a>
+		
+<a href="support.html">Customer Support</a>
+		
+<a href="refunds.html">Refunds and Returns</a>
+
+<a href="terms.html">Terms & Conditions</a>
+
+<a href="privacy.html">Privacy Policy</a>
+<a href="notice.html">Notice</a>
+
+<a href="aboutus.html">About Us</a>
+	</nav>
+
+
+
+
+
+    <h1>Terms and Conditions</h1>
+    <p>Welcome to Pappu Vegetables. By placing an order on this website, you agree to the following terms and conditions:</p>
+    
+    <h2>1. Pre-Payment</h2>
+    <p>All orders must be prepaid before they can be processed. We accept payment through UPI (Unified Payments Interface).</p>
+    
+    <h2>2. Placing an Order</h2>
+    <p>To place an order, you must provide the following information:</p>
+    <ul>
+        <li>Order details with quantity</li>
+<li>Payment reeference/screenshot</li>
+<li>Your Address details in case of home delivery</li>
+    </ul>
+<p>Please refer to our <a href="process.html">Online Ordering Procedure</a> for detailed information about placing an order. </p>
+
+<p> Please do not make any kind of changes in the 'Order Details' or 'Total' amount manually, add/remove the items according to your preference in the cart only and same will be reflected in the order details. Also do not refresh the page while placing an order or adding items in the cart.</p>
+    
+    <h2>3. Payment Confirmation</h2>
+    <p>Once you have sent us the order detail and made the payment to our UPI ID: <b>anyid@upi</b> or using QR code available in <a href="process.html">Online Ordering Procedure</a></p>
+    
+    <h2>4. Packing and Delivery/Pickup</h2>
+    <p>Your order will be packed and made ready for delivery/pickup only after we receive confirmation of payment to our UPI ID or QR. The time required for packing and delivery/pickup will be communicated to you separately. At any stage if any item ordered is out of stock we will try our best to arrange the same and even then if we could not do so, then we intimate the same and process the full refund for the same</p>
+    
+    <h2>5. Home Delivery</h2>
+    <p>We offer FREE HOME DELIVERY services to all customers with an order value of INR 500 or more within 1 km of our operations. For home delivery of distance more than 1 km, extra delivery charges to be borne by customer and same will be communicated in same mode of communication as the order was placed. </p>
+    
+    <h2>6. Refunds and Cancellations</h2>
+    <p>Refunds and cancellations are subject to our <a href="refunds.html">refund policy</a>. Please refer to the refund policy section on our website for more details.</p>
+    
+    <h2>7. Privacy</h2>
+    <p>We value your privacy and will handle your personal information in accordance with our privacy policy. Please refer to the <a href="privacy.html">privacy policy</a> for more details.</p>
+    
+    <h2>8. Contact Information</h2>
+    <p>If you have any questions or concerns regarding these terms and conditions, please <a href="support.html">contact us</a> using the following information:</p>
+    <ul>
+        <li>Email: imd43764@gmail.com</li>
+        <li>Phone: +91 98308 36212</li>
+    </ul>
+
+<p>Please note that our terms & conditions is subject to change without prior notice. By placing an order on our website, you acknowledge that you have read, understood, and agreed to our refund policy, terms & conditions and <a href="privacy.html"> privacy policy.</a></p>
+
+    
+
+    <br><p align= "center";>All prices/rates/figures on our website is in INR.</p>
+    <div class="terms-copy">&copy I. Farhat, Farhat e Services & Assistance<br>
+    </div>
+  </body>
+</html>
