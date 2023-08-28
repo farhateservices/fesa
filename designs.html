@@ -476,7 +476,7 @@
   border: 0.05rem solid transparent;
 
 }
-.border:hover {
+.border:hover, .border.active {
   border: 0.05rem solid #0079eb;
   border-radius: 0.25rem;
   background-color: #ffffff;
@@ -1088,13 +1088,12 @@ li a {
           <div class="nav-logo-img">
           </div>
       </div></a>
-  
-         <a href="index.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-house"></i></div> Home</div></a>
-         <a href="projects.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-laptop-code"></i></div> Projects</div></a>
-         <a href="designs.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-palette"></i></div> Designs</div></a>
-         <a href="services.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-gears"></i></div> Services</div></a>
-         <a href="about.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-address-card"></i></div> About</div></a>
-         <a href="contact.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-square-phone"></i></div> Contacts</div></a>
+      <a href="index.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-house"></i></div><pre>  Home  </pre></div></a>
+      <a href="projects.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-laptop-code"></i></div> Projects</div></a>
+      <a href="designs.html"><div class="nav-text border active"><div class="nav-icon"><i class="fa-solid fa-palette"></i></div> Designs</div></a>
+      <a href="services.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-gears"></i></div> Services</div></a>
+      <a href="about.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-address-card"></i></div><pre> About </pre></div></a>
+      <a href="contact.html"><div class="nav-text border"><div class="nav-icon"><i class="fa-solid fa-square-phone"></i></div> Contact</div></a>
 
       </div>
   </div><hr class="nav-hr"> 
@@ -1103,8 +1102,7 @@ li a {
 <body>
 <!--First Slider Starts Here-->
 <div class="container-v">
- <h1>
-  <i class="fa-solid fa-palette"></i> Our Graphic Designs <i class="fa-solid fa-palette"></i></h1>
+ <h1>Our Graphic Designs</h1>
     <h2>Promotional designs for Bill Boards</h2>
   <div class="first-slider-centerer">
     <div class="first-slider-container">
@@ -1283,7 +1281,8 @@ li a {
     <button class="fourth-slider-button fourth-next-slide"><i class="fas fa-angles-right"></i></button>
   </div>
 </div>
-</div>
+</div>   <hr> <br>
+To learn more about our services, please visit the <a href="services.html" style="color: white;">Services</a> page.
 </div>
 
 
@@ -1341,86 +1340,89 @@ li a {
     </ul>                            
   </div>
 
-<div class="foot-panel5">
-<!-- CV Requesting Form -->
-<form method="POST" name="cv-form">
-  <div class="container-cv">
-    <div class="cv-email-container">
-      <input type="email" id="cv-email" name="cv-email" placeholder="Your Email (Company)" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
-      <input type="hidden" id="form-date" name="form-date">
-<input type="hidden" id="form-time" name="form-time">
-    </div>
-    <div class="cv-button-container">
-      <input type="submit" value="Request CV &#10148;" class="cv-button" name="cv-submit">
-      <div class="message-container-cv" style="display: none;">
-        <div class="please-wait-cv">
-          Please wait<span class="blinking-dots">...</span>
+  <div class="foot-panel5">
+    <!-- CV Requesting Form -->
+    <form method="POST" name="cv-form">
+      <div class="container-cv">
+        <div class="cv-email-container">
+          <input type="email" id="cv-email" name="cv-email" placeholder="Your Email (Company)" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
+          <input type="hidden" id="form-date" name="form-date">
+    <input type="hidden" id="form-time" name="form-time">
         </div>
-        <div class="cv-error" style="display: none;">
-          Error <i class="fa-solid fa-circle-exclamation fa-shake"></i>
-        </div>
-        <div class="cv-success" style="display: none;">
-          Your CV request has been received! <span class="tick-symbol"><i class="fa-solid fa-file fa-flip"></i></span>
-          <br>You wil get a response soon.
-        </div>
-      </div>
-    </div>
-  </div>
-</form>
-<!-- Click the stars to give a rating! -->
-<form method="POST" name="google-sheet">
-  <div class="container-rate">
-    <div class="star-group">
-      <input type="radio" class="star" id="one" name="star_rating" value="1">
-      <input type="radio" class="star" id="two" name="star_rating" value="2">
-      <input type="radio" class="star" id="three" name="star_rating" value="3">
-      <input type="radio" class="star" id="four" name="star_rating" value="4">
-      <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
-      <input type="hidden" id="form-date" name="form-date">
-<input type="hidden" id="form-time" name="form-time">
-    </div>
-    <div class="rate-button-container">
-      <input type="submit" value="Rate us &starf;" class="rate-button" name="submit">
-      <div class="message-container" style="display: none;">
-        <div class="please-wait">
-          Please wait<span class="blinking-dots">...</span>
-        </div>
-        <div class="ratings-error" style="display: none;">
-          Error <i class="fa-solid fa-circle-exclamation fa-shake"></i>
-        </div>
-        <div class="ratings-success" style="display: none;">
-          Thank you for rating us! <span class="tick-symbol"><i class="fa-solid fa-star fa-flip"></i></span>
-          <br>Your feedback is important to us.
+        <div class="cv-button-container">
+          <input type="submit" value="Request CV &#10148;" class="cv-button" name="cv-submit">
+          <div class="message-container-cv" style="display: none;">
+            <div class="please-wait-cv">
+              Please wait<span class="blinking-dots">...</span>
+            </div>
+            <div class="cv-error" style="display: none;">
+              Error while requesting CV <i class="fa-solid fa-circle-exclamation fa-shake"></i>
+              <br>Please try again later <a href="contact.html#SendMessage" style="color: red;">or report.</a>
+            </div>
+            <div class="cv-success" style="display: none;">
+              Your CV request has been received! <span class="tick-symbol"><i class="fa-solid fa-file fa-flip"></i></span>
+              <br>You wil get a response soon.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</form>
-<!--Newletter sub form-->
-<form method="POST" name="subscribe-form">
-  <div class="container-sub">
-    <div class="sub-email-container">
-      <input type="email" id="sub-email" name="sub-email" placeholder="Your Email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
-      <input type="hidden" id="form-date" name="form-date">
-<input type="hidden" id="form-time" name="form-time">
-    </div>
-    <div class="sub-button-container">
-      <input type="submit" value="Subscribe &plus;" class="sub-button" name="sub-submit">
-      <div class="message-container-sub" style="display: none;">
-        <div class="please-wait-sub">
-          Please wait<span class="blinking-dots">...</span>
+    </form>
+    <!-- Click the stars to give a rating! -->
+    <form method="POST" name="google-sheet">
+      <div class="container-rate">
+        <div class="star-group">
+          <input type="radio" class="star" id="one" name="star_rating" value="1">
+          <input type="radio" class="star" id="two" name="star_rating" value="2">
+          <input type="radio" class="star" id="three" name="star_rating" value="3">
+          <input type="radio" class="star" id="four" name="star_rating" value="4">
+          <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
+          <input type="hidden" id="form-date" name="form-date">
+    <input type="hidden" id="form-time" name="form-time">
         </div>
-        <div class="sub-error" style="display: none;">
-          Error <i class="fa-solid fa-circle-exclamation fa-shake"></i>
-        </div>
-        <div class="sub-success" style="display: none;">
-          Thank you for subscribing to our<br>newsletter community! <span class="tick-symbol"><i class="fa-solid fa-users fa-flip"></i></span>
+        <div class="rate-button-container">
+          <input type="submit" value="Rate us &starf;" class="rate-button" name="submit">
+          <div class="message-container" style="display: none;">
+            <div class="please-wait">
+              Please wait<span class="blinking-dots">...</span>
+            </div>
+            <div class="ratings-error" style="display: none;">
+              Error while rating <i class="fa-solid fa-circle-exclamation fa-shake"></i>
+              <br>Please try again later <a href="contact.html#SendMessage" style="color: red;">or report.</a>
+            </div>
+            <div class="ratings-success" style="display: none;">
+              Thank you for rating us! <span class="tick-symbol"><i class="fa-solid fa-star fa-flip"></i></span>
+              <br>Your feedback is valuable to us.
+            </div>
+          </div>
         </div>
       </div>
+    </form>
+    <!--Newletter sub form-->
+    <form method="POST" name="subscribe-form">
+      <div class="container-sub">
+        <div class="sub-email-container">
+          <input type="email" id="sub-email" name="sub-email" placeholder="Your Email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address">
+          <input type="hidden" id="form-date" name="form-date">
+    <input type="hidden" id="form-time" name="form-time">
+        </div>
+        <div class="sub-button-container">
+          <input type="submit" value="Subscribe &plus;" class="sub-button" name="sub-submit">
+          <div class="message-container-sub" style="display: none;">
+            <div class="please-wait-sub">
+              Please wait<span class="blinking-dots">...</span>
+            </div>
+            <div class="sub-error" style="display: none;">
+              Error while subscribing <i class="fa-solid fa-circle-exclamation fa-shake"></i>
+              <br>Please try again later <a href="contact.html#SendMessage" style="color: red;">or report.</a>
+            </div>
+            <div class="sub-success" style="display: none;">
+              Thank you for subscribing to our<br>newsletter community! <span class="tick-symbol"><i class="fa-solid fa-users fa-flip"></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
     </div>
-  </div>
-</form>
-</div>
 
   <hr class="logo-end-hr">
   <div class="foot-panel3">
@@ -1443,11 +1445,12 @@ li a {
 
   <div class="foot-panel4">
     <div class="foot-pages">
-      <a href="conditionofuse.html">Conditions of Use</a>
-      <a href="privacy.html">Privicy Notice</a>
-  
+      <a href="conditionofuse.html">Conditions of Use</a> | <a href="privacy.html">Privicy Notice</a>
     </div>
-    <div class="copyright"><i class="fa-regular fa-copyright"></i> 2023 I. Farhat | Farhat e Services & Assistance</div>
+<p style="text-align: center; font-style: normal; margin: 0;margin-top: 0.25rem; font-size: 0.85rem;">
+     Optimised: <i class="fa-brands fa-chrome"></i> | Compatible: <i class="fa-brands fa-internet-explorer"></i> <i class="fa-brands fa-edge"></i> <i class="fa-brands fa-opera"></i> <i class="fa-brands fa-safari"></i>
+    </p>
+    <div class="copyright">&copy; 2023 I. Farhat | Farhat e Services & Assistance</div>
   </div>
 </footer>
 <script>
