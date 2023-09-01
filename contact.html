@@ -693,7 +693,7 @@ background-position: 0 0,15px 15px;
 }
 
 
-
+/*
 #attachment-checkbox:checked + .slider {
   transform: translateX(30px);
   background-color: #4CAF50;
@@ -703,7 +703,7 @@ background-position: 0 0,15px 15px;
   display: inline-block;
   display: flex;
   justify-content: space-between;
-}
+} */
 
 /* Reset Styles */
 .contact-s-container * {
@@ -717,7 +717,7 @@ background-position: 0 0,15px 15px;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 15px; /* Reduced from 20px */
-  margin-bottom: 10PX;
+  margin-bottom: 10px;
 }
 
 /* Switch Holder */
@@ -749,10 +749,13 @@ background-position: 0 0,15px 15px;
 }
 
 .contact-s-switch-toggle input[type="checkbox"] {
-  position: absolute;
+  position: relative; /* Change to relative positioning */
   opacity: 0;
-  z-index: -2;
+  z-index: 1; /* Change to a positive z-index */
+  max-width: 100%; /* Ensure it does not exceed the container's width */
+  width: auto; /* Allow it to take its natural width within the container */
 }
+
 
 .contact-s-switch-toggle input[type="checkbox"] + label {
   position: relative;
@@ -764,6 +767,7 @@ background-position: 0 0,15px 15px;
   cursor: pointer;
   box-shadow: inset -2.25px -2.25px 3.75px #0079eb,
               inset 3.75px 3.75px 3.75px rgba(0, 0, 0, 0.25);
+              
 }
 
 .contact-s-switch-toggle input[type="checkbox"] + label::before {
@@ -807,9 +811,7 @@ background-position: 0 0,15px 15px;
   box-shadow: -2.25px -2.25px 3.75px #0079eb80,
               2.25px 2.25px 3.75px rgba(0, 0, 0, 0.25);
 }
-#contact-s-news {
-  scale: 1;
-}
+
   /* links for icons in up part of contact page*/
   #email a,
 #wp a,
@@ -817,10 +819,6 @@ background-position: 0 0,15px 15px;
   color: #ffffff;
   text-decoration: none;
   display: flex;
-}
-
-html {
-overflow-x: hidden;
 }
 
 </style>
@@ -1419,4 +1417,4 @@ if ( window.history.replaceState ) {
 
 </script>
 </html>
-gdfgdf
+f
