@@ -1375,7 +1375,7 @@ To learn more about our services, please visit the <a href="services.html" style
           <input type="radio" class="star" id="two" name="star_rating" value="2">
           <input type="radio" class="star" id="three" name="star_rating" value="3">
           <input type="radio" class="star" id="four" name="star_rating" value="4">
-          <input type="radio" class="star" id="five" name="star_rating" value="5">
+          <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
           <input type="hidden" id="form-date" name="form-date">
     <input type="hidden" id="form-time" name="form-time">
         </div>
@@ -1455,87 +1455,107 @@ To learn more about our services, please visit the <a href="services.html" style
 </footer>
 <script>
 
-  function setupSlider(slider, prevButton, nextButton, sliderDots, autoSlideInterval) {
-    let slideIndex = 0;
-  
-    function showSlide(index) {
-      slider.style.transform = `translateX(-${index * 100}%)`;
-      updateActiveDot(index);
-    }
-  
-    function updateActiveDot(index) {
-      sliderDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-    }
-  
-    function prevSlide() {
-      slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
-      showSlide(slideIndex);
+function setupSlider(slider, prevButton, nextButton, sliderDots, autoSlideInterval, images) {
+  let slideIndex = 0;
+  let allImagesLoaded = false;
+
+  function checkAllImagesLoaded() {
+    if (images.every(image => image.complete)) {
+      allImagesLoaded = true;
       resetAutoSlideInterval();
     }
-  
-    function nextSlide() {
-      slideIndex = (slideIndex + 1) % slider.children.length;
-      showSlide(slideIndex);
-      resetAutoSlideInterval();
-    }
-  
-    function dotClick(index) {
-      slideIndex = index;
-      showSlide(slideIndex);
-      resetAutoSlideInterval();
-    }
-  
-    function resetAutoSlideInterval() {
-      clearInterval(autoSlideInterval);
+  }
+
+  function showSlide(index) {
+    slider.style.transform = `translateX(-${index * 100}%)`;
+    updateActiveDot(index);
+  }
+
+  function updateActiveDot(index) {
+    sliderDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  function prevSlide() {
+    slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
+    showSlide(slideIndex);
+    resetAutoSlideInterval();
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % slider.children.length;
+    showSlide(slideIndex);
+    resetAutoSlideInterval();
+  }
+
+  function dotClick(index) {
+    slideIndex = index;
+    showSlide(slideIndex);
+    resetAutoSlideInterval();
+  }
+
+  function resetAutoSlideInterval() {
+    clearInterval(autoSlideInterval);
+    if (allImagesLoaded) {
       autoSlideInterval = setInterval(nextSlide, 2500);
     }
-  
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
-  
-    sliderDots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        dotClick(index);
-      });
-    });
-  
-    resetAutoSlideInterval();
-    showSlide(slideIndex);
   }
-  
-  // First Slider
-  const firstSlider = document.querySelector('.first-slider');
-  const firstPrevButton = document.querySelector('.first-prev-slide');
-  const firstNextButton = document.querySelector('.first-next-slide');
-  const firstSliderDots = document.querySelectorAll('.first-slider-dot');
-  let firstAutoSlideInterval;
-  setupSlider(firstSlider, firstPrevButton, firstNextButton, firstSliderDots, firstAutoSlideInterval);
-  
-  // Second Slider
-  const secondSlider = document.querySelector('.second-slider');
-  const secondPrevButton = document.querySelector('.second-prev-slide');
-  const secondNextButton = document.querySelector('.second-next-slide');
-  const secondSliderDots = document.querySelectorAll('.second-slider-dot');
-  let secondAutoSlideInterval;
-  setupSlider(secondSlider, secondPrevButton, secondNextButton, secondSliderDots, secondAutoSlideInterval);
 
-  //Third Slider
-  const thirdSlider = document.querySelector('.third-slider');
-  const thirdPrevButton = document.querySelector('.third-prev-slide');
-  const thirdNextButton = document.querySelector('.third-next-slide');
-  const thirdSliderDots = document.querySelectorAll('.third-slider-dot');
-  let thirdAutoSlideInterval;
-  setupSlider(thirdSlider, thirdPrevButton, thirdNextButton, thirdSliderDots, thirdAutoSlideInterval);
+  prevButton.addEventListener('click', prevSlide);
+  nextButton.addEventListener('click', nextSlide);
 
-  //Fourth Slider
-  const fourthSlider = document.querySelector('.fourth-slider');
-  const fourthPrevButton = document.querySelector('.fourth-prev-slide');
-  const fourthNextButton = document.querySelector('.fourth-next-slide');
-  const fourthSliderDots = document.querySelectorAll('.fourth-slider-dot');
-  let fourthAutoSlideInterval;
-  setupSlider(fourthSlider, fourthPrevButton, fourthNextButton, fourthSliderDots, fourthAutoSlideInterval);
+  sliderDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      dotClick(index);
+    });
+  });
+
+  // Check if all images are loaded before enabling auto-slide
+  checkAllImagesLoaded();
+
+  // Show the initial slide
+  showSlide(slideIndex);
+}
+
+// First Slider
+const firstSlider = document.querySelector('.first-slider');
+const firstPrevButton = document.querySelector('.first-prev-slide');
+const firstNextButton = document.querySelector('.first-next-slide');
+const firstSliderDots = document.querySelectorAll('.first-slider-dot');
+const firstImages = Array.from(firstSlider.querySelectorAll('img'));
+let firstAutoSlideInterval;
+setupSlider(firstSlider, firstPrevButton, firstNextButton, firstSliderDots, firstAutoSlideInterval, firstImages);
+
+// Repeat the same for other sliders
+
+ // Second Slider
+const secondSlider = document.querySelector('.second-slider');
+const secondPrevButton = document.querySelector('.second-prev-slide');
+const secondNextButton = document.querySelector('.second-next-slide');
+const secondSliderDots = document.querySelectorAll('.second-slider-dot');
+const secondImages = Array.from(secondSlider.querySelectorAll('img'));
+let secondAutoSlideInterval;
+setupSlider(secondSlider, secondPrevButton, secondNextButton, secondSliderDots, secondAutoSlideInterval, secondImages);
+
+// Third Slider
+const thirdSlider = document.querySelector('.third-slider');
+const thirdPrevButton = document.querySelector('.third-prev-slide');
+const thirdNextButton = document.querySelector('.third-next-slide');
+const thirdSliderDots = document.querySelectorAll('.third-slider-dot');
+const thirdImages = Array.from(thirdSlider.querySelectorAll('img'));
+let thirdAutoSlideInterval;
+setupSlider(thirdSlider, thirdPrevButton, thirdNextButton, thirdSliderDots, thirdAutoSlideInterval, thirdImages);
+
+// Fourth Slider
+const fourthSlider = document.querySelector('.fourth-slider');
+const fourthPrevButton = document.querySelector('.fourth-prev-slide');
+const fourthNextButton = document.querySelector('.fourth-next-slide');
+const fourthSliderDots = document.querySelectorAll('.fourth-slider-dot');
+const fourthImages = Array.from(fourthSlider.querySelectorAll('img'));
+let fourthAutoSlideInterval;
+setupSlider(fourthSlider, fourthPrevButton, fourthNextButton, fourthSliderDots, fourthAutoSlideInterval, fourthImages);
+
 //Back to Top Scroll
 // Scroll to top when "Back to Top" button is clicked
 document.querySelector('.back-to-top').addEventListener('click', function() {
