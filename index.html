@@ -685,8 +685,18 @@ background-position: 0 0,15px 15px;
   color: red;
   border: none;
   cursor: pointer;
-  padding: 3px 5px;
+  padding: 3px 10px;
   border-radius: 2.5px;
+  margin: 5px;
+  font-weight: bold;
+  transition: all .3s ease-in;
+}
+.pop-close-btn:hover {
+  background-color: red;
+  color: white;
+}
+.pop-close-btn:active {
+  background-color: rgba(255, 0, 0, 0.75);
 }
 .download-pop {
   display: flex;
@@ -742,7 +752,7 @@ background-position: 0 0,15px 15px;
   <div class="pop-container">
     <div class="pop-content">
       <img src="images/fesa welcome web.png" alt="Welcome to Farhat e Services & Assistance" class="pop-image">
-      <button class="pop-close-btn" id="closePop">Close</button>
+      <button class="pop-close-btn" id="closePop">X</button>
     </div>
    <!-- <div class="download-pop">
       <a href="images/rakhi-e-wish.png" download="Happy Rakshbandhan from Farhat e Services & Assistance">Download</a>
