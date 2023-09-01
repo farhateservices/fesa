@@ -156,7 +156,6 @@ margin-top: 10px;
 form {
     margin-right: 20px;
 }
-  
     /* body*/
     body {
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
@@ -164,7 +163,7 @@ form {
       padding: 0;    
       background: linear-gradient( #00296b,#0079eb);
    /*   background-image: url(images/bghomev2.gif);*/
-     background-size: cover;
+     background-size: contain;
      background-position: center;
       color: #ffffff;
       background-color: #00296B;
@@ -172,7 +171,9 @@ opacity: 1;
 background-image:  radial-gradient(#0079EB 0.75px, transparent 0.75px), radial-gradient(#0079EB 0.75px, #00296B 0.75px);
 background-size: 30px 30px;
 background-position: 0 0,15px 15px;
+overflow-x: hidden;
     }
+
     .container-v {
       max-width: 728px;
       margin: 20px auto;
@@ -1054,7 +1055,7 @@ background-position: 0 0,15px 15px;
           <input type="radio" class="star" id="two" name="star_rating" value="2">
           <input type="radio" class="star" id="three" name="star_rating" value="3">
           <input type="radio" class="star" id="four" name="star_rating" value="4">
-          <input type="radio" class="star" id="five" name="star_rating" value="5">
+          <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
           <input type="hidden" id="form-date" name="form-date">
     <input type="hidden" id="form-time" name="form-time">
         </div>
