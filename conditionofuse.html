@@ -15,9 +15,9 @@
 }
 .border {
   border: 0.05rem solid transparent;
-
+  transition: all 0.2s ease-in-out;
 }
-.border:hover {
+.border:hover, .border.active {
   border: 0.05rem solid #0079eb;
   border-radius: 0.25rem;
   background-color: #ffffff;
@@ -28,12 +28,13 @@
 
 .borderlogo {
   border: 0.05rem solid transparent;
-
 }
 
 .nav-container{
   height:3rem;
   background-color:#00296b;
+  
+  
 /*  background-image: linear-gradient(  rgba(171, 0, 250, 0.26),#0079eb); */
 /**  background-image: linear-gradient(#0079eb, #05257c); **/
  /* background-color: #04001f; */
@@ -41,6 +42,7 @@
 display: flex;
 align-items: center;
 justify-content: space-evenly;  
+
 }
 .nav-container a {
   text-decoration: none;
@@ -56,6 +58,7 @@ justify-content: space-evenly;
   background-size: cover;
   font-weight: bolder;
   border-radius: 50%;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-logo-img:hover {
@@ -65,7 +68,6 @@ justify-content: space-evenly;
   background-color: #ffffff;
   border: 0.05rem solid #0079eb;
   border-radius: 50%;
-
 }
 
 .nav-text {
@@ -85,7 +87,6 @@ justify-content: space-evenly;
   background-color: #ffffff;
   border: none;
 }
-
 /*Body*/
 body {
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
@@ -776,7 +777,7 @@ li a {
           <input type="radio" class="star" id="two" name="star_rating" value="2">
           <input type="radio" class="star" id="three" name="star_rating" value="3">
           <input type="radio" class="star" id="four" name="star_rating" value="4">
-          <input type="radio" class="star" id="five" name="star_rating" value="5">
+          <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
           <input type="hidden" id="form-date" name="form-date">
     <input type="hidden" id="form-time" name="form-time">
         </div>
