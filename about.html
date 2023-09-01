@@ -7,83 +7,85 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="icon" type="image/png" href="images/tab-top.PNG">
 <style>
-  * {
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
-    border: border-box;
-  }
-  .border {
-    border: 0.05rem solid transparent;
+* {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+  border: border-box;
+}
+.border {
+  border: 0.05rem solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+.border:hover, .border.active {
+  border: 0.05rem solid #0079eb;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+  color: #00296b;
+  padding: 0.1rem;
+  font-weight: 550;
+}
+
+.borderlogo {
+  border: 0.05rem solid transparent;
+}
+
+.nav-container{
+  height:3rem;
+  background-color:#00296b;
   
-  }
-  .border:hover, .border.active {
-    border: 0.05rem solid #0079eb;
-    border-radius: 0.25rem;
-    background-color: #ffffff;
-    color: #00296b;
-    padding: 0.1rem;
-    font-weight: 550;
-  }
   
-  .borderlogo {
-    border: 0.05rem solid transparent;
-  
-  }
-  
-  .nav-container{
-    height:3rem;
-    background-color:#00296b;
-  /*  background-image: linear-gradient(  rgba(171, 0, 250, 0.26),#0079eb); */
-  /**  background-image: linear-gradient(#0079eb, #05257c); **/
-   /* background-color: #04001f; */
-  /* background-color: rgb(0, 71, 202);*/
+/*  background-image: linear-gradient(  rgba(171, 0, 250, 0.26),#0079eb); */
+/**  background-image: linear-gradient(#0079eb, #05257c); **/
+ /* background-color: #04001f; */
+/* background-color: rgb(0, 71, 202);*/
+display: flex;
+align-items: center;
+justify-content: space-evenly;  
+
+}
+.nav-container a {
+  text-decoration: none;
+}
+.nav-logo {
+  border-radius: 50%;
+ }
+.nav-logo-img {
+  height:2.25rem;
+  width: 2.25rem;
+  background-image:url(logo-head-white.png);
+/*  margin-left: 5px;*/
+  background-size: cover;
+  font-weight: bolder;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-logo-img:hover {
+  height: 2.3rem;
+  width: 2.3rem;
+  background-image:url(logo-head-black.png);
+  background-color: #ffffff;
+  border: 0.05rem solid #0079eb;
+  border-radius: 50%;
+}
+
+.nav-text {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.nav-icon {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;  
-  }
-  .nav-container a {
-    text-decoration: none;
-  }
-  .nav-logo {
-    border-radius: 50%;
-   }
-  .nav-logo-img {
-    height:2.25rem;
-    width: 2.25rem;
-    background-image:url(logo-head-white.png);
-  /*  margin-left: 5px;*/
-    background-size: cover;
-    font-weight: bolder;
-    border-radius: 50%;
-  }
-  
-  .nav-logo-img:hover {
-    height: 2.3rem;
-    width: 2.3rem;
-    background-image:url(logo-head-black.png);
-    background-color: #ffffff;
-    border: 0.05rem solid #0079eb;
-    border-radius: 50%;
-  
-  }
-  
-  .nav-text {
-    font-size: 0.65rem;
-    font-weight: 400;
-    color: #ffffff;
-  }
-  
-  .nav-icon {
-    display: flex;
-    justify-content: center;
-    font-size: 1.35rem;
-    padding-top: 0.15rem;
-  }
-  .nav-hr {
-    height: 0.01rem;
-    background-color: #ffffff;
-    border: none;
-  }
+  justify-content: center;
+  font-size: 1.35rem;
+  padding-top: 0.15rem;
+}
+.nav-hr {
+  height: 0.01rem;
+  background-color: #ffffff;
+  border: none;
+}
     /* body*/
 
     body {
@@ -763,7 +765,7 @@ background-position: 0 0,15px 15px;
           <input type="radio" class="star" id="two" name="star_rating" value="2">
           <input type="radio" class="star" id="three" name="star_rating" value="3">
           <input type="radio" class="star" id="four" name="star_rating" value="4">
-          <input type="radio" class="star" id="five" name="star_rating" value="5">
+          <input type="radio" class="star" id="five" name="star_rating" value="5" checked>
           <input type="hidden" id="form-date" name="form-date">
     <input type="hidden" id="form-time" name="form-time">
         </div>
