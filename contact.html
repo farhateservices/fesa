@@ -91,15 +91,11 @@ justify-content: space-evenly;
 
   .contact-icons {
     display: flex;
-    margin-bottom: 20px;
-    font-size: 1.25rem;
-    align-items: center;
-    justify-content: start;
-    font-style: italic;
+    margin-bottom: 10px;
   }
   .contact-icons i {
-    margin-right: 10px;
     font-size: 1.5rem;
+    margin-right: 10px;
   }
   .contact-form {
     margin-top: 20px;
@@ -818,12 +814,13 @@ background-position: 0 0,15px 15px;
               2.25px 2.25px 3.75px rgba(0, 0, 0, 0.25);
 }
 
-
-  #email a ,
+  /* links for icons in up part of contact page*/
+  #email a,
 #wp a,
 #ig a {
   color: #ffffff;
   text-decoration: none;
+  display: flex;
 }
 
 </style>
@@ -853,11 +850,11 @@ background-position: 0 0,15px 15px;
     <h2 id="Contacts">Find the below options for contacting us</h2><br>
     <div id="email" class="contact-icons">
       <a href="mailto:farhateservices.in@gmail.com">
-        <i class="fa-regular fa-envelope"></i>farhateservices.in@gmail.com
- 
+        <i class="fa-regular fa-envelope"></i>
+        <p>farhateservices.in@gmail.com</p>
       </a>
-    </div>
 
+    </div>
 
     
     
@@ -867,17 +864,19 @@ background-position: 0 0,15px 15px;
     </div> --> 
     <div id="wp" class="contact-icons">
       <a href="https://wa.me/+919830836212?text=Hi%20Farhat%20e%20Services%20%26%20Assistance!" target="_blank">
-        <i class="fab fa-whatsapp"></i>+91 98308 36212
+        <i class="fab fa-whatsapp"></i>
+      <p>+91 98308 36212</p>
       </a>
     </div>
 
     <div id="ig" class="contact-icons">
       <a href="https://www.instagram.com/farhatesrevices/" target="_blank">
-        <i class="fab fa-instagram"></i>@farhateservices
+        <i class="fab fa-instagram"></i>
+      <p>@farhateservices</p>
       </a> 
     </div>
 
-    <h2 id="Feedbacks" style="margin-top: 30px;">Get in Touch</h2>
+    <h2 id="Feedbacks">Get in Touch</h2>
     <p>We'd love to hear from you, whether you have a question, a project idea, feedback, or just want to say hi. Feel free to reach out to us using the contact information provided above or by submitting a message below. We'll get back to you as soon as possible.</p>
  <hr> <div class="contact-form"> 
     <h2 id="SendMessage">Send us a Message</h2>
