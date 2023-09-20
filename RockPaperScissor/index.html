@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor | Farhat e Services & Assistance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="https://farhateservices.github.io/fesa/images/tab-top.PNG">
+    <style>
+    .rock:hover {
+      background-color: #0563bb;
+      color: white
+    }  
+    .paper:hover {
+      background-color: #0563bb;
+      color: white
+    }  
+    .scissor:hover {
+      background-color: #0563bb;
+      color: white
+    }  
+    button {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: #a2d2ffbf;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0.5rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 550;
+  font-style: italic;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 100ms linear;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25); /* Add a simple box shadow */
+}
+
+    button i {
+      font-size: 2.25rem;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button:active {
+      scale: 0.9;
+    }
+    .btn-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .copyright,.copyright a {
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        background-color: #cae9ff;
+        border-radius: 0.5rem;
+        padding: 0.15rem;
+        margin: 0.5rem;
+      }
+    /*  body {
+        background-color: black;
+      } */
+
+      /*Footer*/
+      .foot-panel3 {
+    color: white;
+  /*  border-top: 0.1rem solid white;*/
+  padding: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(#cae9ffd9 , #cae9ffd9 );
+    border-radius: 1rem;
+    
+  }
+  .foot-panel3 a {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .foot-panel3 i {
+   font-size: 1.75rem;
+   background-color: transparent;
+   padding: 10px;
+    border-radius: 50%;
+    transition: all 250ms linear;
+    color: #2b2d42;
+    font-weight: 500;
+  }
+  .foot-panel3 i:hover {
+   background-color: white;
+   padding: 0.65rem;
+    border-radius: 50%;
+  }
+  .logo-end {
+      height:5rem;
+      width: 5rem;
+      background-image:url(https://farhateservices.github.io/fesa/logo-head-black.png);
+    /*  margin-left: 5px;*/
+      background-size: contain;
+      font-weight: bolder;
+      border-radius: 50%;
+  }
+  
+  .logo-end-hr {
+  color: white;
+  }
+  
+  .logo-end:hover {
+      background-color: white;
+      background-image:url(https://farhateservices.github.io/fesa/images/WEb\ Dev.gif);
+      border: 1.5px solid white;
+      box-sizing: border-box;
+  }
+  @keyframes blinkingDots {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); /* Start off-screen to the left */
+  }
+  25% {
+    opacity: 1; /* Dots are fully visible */
+    transform: translateX(0); /* Move to the original position */
+  }
+  50% {
+    opacity: 0;
+    transform: translateX(100%); /* Move off-screen to the right */
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); /* Stay off-screen to the right */
+  }
+}
+
+/* Apply the animation to an element with the "blinking" class */
+.blinking {
+  animation: blinkingDots 1.25s infinite linear; /* 2s duration, infinite loop */
+}
+
+
+
+    </style>
+  </head>
+  <body>
+
+    <h2>
+      Rock Paper Scissor
+    </h2>
+    <p id="hide">
+      Let's begin the game <span class="blinking">...</span>
+    </p>
+    <P id="show" style="display:none;">
+      Make a choice from the given options <span class="blinking">...</span>
+    </P>
+    <br><br>
+  <div class="btn-container">
+    <button class="rock" onclick="
+    document.getElementById('hide').style.display = 'none';
+    document.getElementById('show').style.display = 'flex';
+    const randomNumber = Math.random();
+    let result = '';
+    let won = 0;
+    // randomNumber +=1; //activate this to check alert and make randomNumber let
+    if (randomNumber >= 0 && randomNumber < 1/3) {
+      compChoice = 'Rock';
+    }
+    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+      compChoice = 'Paper'
+    }
+    else if (randomNumber >= 2/3 && randomNumber < 1) {
+      compChoice = 'Scissor'
+    }
+    else {
+      alert ('Computer failed to make a choice!')
+    }
+    userChoice = 'Rock';
+    console.log(`Your choice: ${userChoice}`);
+    console.log(`Computer\'s choice: ${compChoice}`);
+
+    if (userChoice === compChoice) {
+        result = 'Draw!';
+      }
+
+      else if (compChoice === 'Scissor') {
+        result = 'Won!';
+      }
+
+      else if (compChoice === 'Paper') {
+        result = 'Lost!';
+      }
+
+      console.log(result);
+      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\n\nResult: ${result}`);
+    ">
+      <i class="fa-solid fa-hand-fist"></i><i class="fa-regular fa-hand-back-fist"></i>Rock
+    </button>
+
+    <button class="paper" onclick="
+    document.getElementById('hide').style.display = 'none';
+    const randomNumber = Math.random();
+    let result = '';
+    // randomNumber +=1; //activate this to check alert and make randomNumber let
+    if (randomNumber >= 0 && randomNumber < 1/3) {
+      compChoice = 'Rock';
+    }
+    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+      compChoice = 'Paper'
+    }
+    else if (randomNumber >= 2/3 && randomNumber < 1) {
+      compChoice = 'Scissor'
+    }
+    else {
+      alert ('Computer failed to make a choice!')
+    }
+
+    userChoice = 'Paper';
+    console.log(`Your choice: ${userChoice}`);
+    console.log(`Computer\'s choice choice: ${compChoice}`);
+
+    if (userChoice === compChoice) {
+        result = 'Draw!';
+      }
+
+      else if (compChoice === 'Rock') {
+        result = 'Won!';
+      }
+
+      else if (compChoice === 'Scissor') {
+        result = 'Lost!';
+      }
+
+      console.log(result);
+      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\n\nResult: ${result}`);
+    ">
+      <i class="fa-solid fa-hand"></i><i class="fa-regular fa-hand"></i>Paper
+    </button>
+
+    <button class="scissor" onclick="
+    document.getElementById('hide').style.display = 'none';
+    const randomNumber = Math.random();
+    let result = '';
+    // randomNumber +=1; //activate this to check alert and make randomNumber let
+    if (randomNumber >= 0 && randomNumber < 1/3) {
+      compChoice = 'Rock';
+    }
+    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+      compChoice = 'Paper'
+    }
+    else if (randomNumber >= 2/3 && randomNumber < 1) {
+      compChoice = 'Scissor'
+    }
+    else {
+      alert ('Computer failed to make a choice!')
+    }
+
+    userChoice = 'Scissor';
+    console.log(`Your choice: ${userChoice}`);
+    console.log(`Computer\'s choice choice: ${compChoice}`);
+
+    if (userChoice === compChoice) {
+        result = 'Draw!';
+      }
+
+      else if (compChoice === 'Paper') {
+        result = 'Won!';
+      }
+
+      else if (compChoice === 'Rock') {
+        result = 'Lost!';
+      }
+
+      console.log(result);
+      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\n\nResult: ${result}`);
+    ">
+      <i class="fa-solid fa-hand-peace"></i><i class="fa-regular fa-hand-scissors fa-rotate-90"></i>Scissor
+    </button>
+  </div> 
+  <br><br><br><br><br><br>  <br><br><br><br><br><br>  <br><br><br><br>
+  <footer>
+    <hr class="logo-end-hr">
+    <div class="foot-panel3">
+      <a href="mailto:farhateservices.in@gmail.com">
+      <i class="fa-regular fa-envelope fa-beat"></i>
+      <a href="https://farhateservices.github.io/fesa/contact.html#SendMessage">
+        <i class="fa-regular fa-comment-dots fa-beat"></i>
+      </a>
+      </a>
+    <a href="https://farhateservices.github.io/fesa/" target="_blank"><div class="logo-end"></div></a>
+  
+  
+  <a href="https://wa.me/+919830836212?text=Hi%20Farhat%20e%20Services%20%26%20Assistance!" target="_blank">
+    <i class="fa-brands fa-whatsapp fa-beat"></i>
+  </a>
+  <a href="https://www.instagram.com/farhatesrevices/" target="_blank">
+    <i class="fa-brands fa-instagram fa-beat"></i>
+  </a> 
+    </div><hr class="logo-end-hr">
+  
+    <p class="copyright">
+      <a href="https://farhateservices.github.io/fesa" target="_blank">
+        <i class="fa-regular fa-copyright"></i> &nbsp; I. Farhat |&nbsp;<img style="height: 1.25rem; width: auto;" src="https://farhateservices.github.io/fesa/logo-head-black.png" alt=""> &nbsp; Farhat e Services & Assistance
+      </a>
+    </p>
+  
+  </footer>
+  <script>
+
+</script>
+  </body>
+</html>  
