@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissor | Farhat e Services & Assistance</title>
+    <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/png" href="https://farhateservices.github.io/fesa/images/tab-top.PNG">
     <style>
-    .rock:hover {
-      border: 4px solid royalblue;
+    .rock {
+      
     }  
-    .paper:hover {
-      border: 4px solid royalblue;
+    .paper {
+      
     }  
-    .scissor:hover {
-      border: 4px solid royalblue;
+    .scissor {
+      
     }  
     button {
   height: 6rem;
@@ -29,7 +29,6 @@
   font-style: italic;
   -webkit-tap-highlight-color: transparent;
   transition: all 100ms linear;
-  user-select: none;
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.25); /* Add a simple box shadow */
 }
 
@@ -39,16 +38,11 @@
     }
     button:active {
       scale: 0.9;
-      background-color: #0079ebd9;
-      color: white;
     }
     .btn-container {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-    }
-    p {
-      font-size: 1.15rem;
     }
     .copyright,.copyright a {
         font-size: 0.85rem;
@@ -165,204 +159,153 @@
     <br><br>
   <div class="btn-container">
     <button class="rock" onclick="
-    document.getElementById('hide').style.display = 'none';
-    document.getElementById('show').style.display = 'flex';
-    const randomNumber = Math.random();
-    let result = '';
-    let compChoice = '';
-    // randomNumber +=1; //activate this to check alert and make randomNumber let
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-      compChoice = 'Rock';
-    }
-    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-      compChoice = 'Paper'
-    }
-    else if (randomNumber >= 2/3 && randomNumber < 1) {
-      compChoice = 'Scissor'
-    }
-    else {
-      alert ('Computer failed to make a choice!')
-    }
-    userChoice = 'Rock';
-    console.log(`Your choice: ${userChoice}`);
-    console.log(`Computer\'s choice: ${compChoice}`);
+    showHide();
+    compChoice = pickComputerMove();
 
-    if (userChoice === compChoice) {
-        result = 'Draw!';
-      }
-
-      else if (compChoice === 'Scissor') {
-        result = 'Won!';
-      }
-
-      else if (compChoice === 'Paper') {
-        result = 'Lost!';
-      }
-
-      else {
-        result = 'Error while deciding the result';
-      }
-
-      console.log(result);
-      if (result !== 'Draw!') {
-        if (result === 'Won!') {
-      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nCongratulations You ${result}`);
-        }
-        else {
-          alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nSorry You ${result}`);
-        }
-      }
-      else {
-        alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nMatch ${result}`);
-      }
+    playGame('Rock');
     ">
       <i class="fa-solid fa-hand-fist"></i><i class="fa-regular fa-hand-back-fist"></i>Rock
     </button>
 
     <button class="paper" onclick="
-    document.getElementById('hide').style.display = 'none';
-    document.getElementById('show').style.display = 'flex';
-    const randomNumber = Math.random();
-    let result = '';
-    let compChoice = '';
-
-    // randomNumber +=1; //activate this to check alert and make randomNumber let
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-      compChoice = 'Rock';
-    }
-    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-      compChoice = 'Paper'
-    }
-    else if (randomNumber >= 2/3 && randomNumber < 1) {
-      compChoice = 'Scissor'
-    }
-    else {
-      alert ('Computer failed to make a choice!')
-    }
-
-    userChoice = 'Paper';
-    console.log(`Your choice: ${userChoice}`);
-    console.log(`Computer\'s choice choice: ${compChoice}`);
-
-    if (userChoice === compChoice) {
-        result = 'Draw!';
-      }
-
-      else if (compChoice === 'Rock') {
-        result = 'Won!';
-      }
-
-      else if (compChoice === 'Scissor') {
-        result = 'Lost!';
-      }
-
-      else {
-        result = 'Error while deciding the result';
-      }
-
-      console.log(result);
-      if (result !== 'Draw!') {
-        if (result === 'Won!') {
-      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nCongratulations You ${result}`);
-        }
-        else {
-          alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nSorry You ${result}`);
-        }
-      }
-      else {
-        alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nMatch ${result}`);
-      }
+    showHide();
+    compChoice = pickComputerMove();
+    playGame('Paper');
     ">
       <i class="fa-solid fa-hand"></i><i class="fa-regular fa-hand"></i>Paper
     </button>
 
     <button class="scissor" onclick="
-    document.getElementById('hide').style.display = 'none';
-    document.getElementById('show').style.display = 'flex';
-    const randomNumber = Math.random();
-    let result = '';
-    let compChoice = '';
-
-    // randomNumber +=1; //activate this to check alert and make randomNumber let
-    if (randomNumber >= 0 && randomNumber < 1/3) {
-      compChoice = 'Rock';
-    }
-    else if (randomNumber >= 1/3 && randomNumber < 2/3) {
-      compChoice = 'Paper'
-    }
-    else if (randomNumber >= 2/3 && randomNumber < 1) {
-      compChoice = 'Scissor'
-    }
-    else {
-      alert ('Computer failed to make a choice!')
-    }
-
-    userChoice = 'Scissor';
-    console.log(`Your choice: ${userChoice}`);
-    console.log(`Computer\'s choice choice: ${compChoice}`);
-
-    if (userChoice === compChoice) {
-        result = 'Draw!';
-      }
-
-      else if (compChoice === 'Paper') {
-        result = 'Won!';
-      }
-
-      else if (compChoice === 'Rock') {
-        result = 'Lost!';
-      }
-
-      else {
-        result = 'Error while deciding the result';
-      }
-
-      console.log(result);
-      if (result !== 'Draw!') {
-        if (result === 'Won!') {
-      alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nCongratulations You ${result}`);
-        }
-        else {
-          alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nSorry You ${result}`);
-        }
-      }
-      else {
-        alert(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nMatch ${result}`);
-      }
+    showHide();  
+    compChoice=pickComputerMove();
+    playGame('Scissor');
+  
     ">
       <i class="fa-solid fa-hand-peace"></i><i class="fa-regular fa-hand-scissors fa-rotate-90"></i>Scissor
     </button>
   </div> 
-  <br><br><br><br><br><br>  <br><br><br><br><br><br>  <br><br><br><br>
-  <footer>
-    <hr class="logo-end-hr">
-    <div class="foot-panel3">
-      <a href="mailto:farhateservices.in@gmail.com">
-      <i class="fa-regular fa-envelope fa-beat"></i>
-      <a href="https://farhateservices.github.io/fesa/contact.html#SendMessage">
-        <i class="fa-regular fa-comment-dots fa-beat"></i>
-      </a>
-      </a>
-    <a href="https://farhateservices.github.io/fesa/" target="_blank"><div class="logo-end"></div></a>
-  
-  
-  <a href="https://wa.me/+919830836212?text=Hi%20Farhat%20e%20Services%20%26%20Assistance!" target="_blank">
-    <i class="fa-brands fa-whatsapp fa-beat"></i>
-  </a>
-  <a href="https://www.instagram.com/farhatesrevices/" target="_blank">
-    <i class="fa-brands fa-instagram fa-beat"></i>
-  </a> 
-    </div><hr class="logo-end-hr">
-  
-    <p class="copyright">
-      <a href="https://farhateservices.github.io/fesa" target="_blank">
-        <i class="fa-regular fa-copyright"></i> &nbsp; I. Farhat |&nbsp;<img style="height: 1.25rem; width: auto;" src="https://farhateservices.github.io/fesa/logo-head-black.png" alt=""> &nbsp; Farhat e Services & Assistance
-      </a>
-    </p>
-  
-  </footer>
+
+  <h4 class="js-score-para"></h4>
+
+  <button class="reset-btn" style="border: 2px solid black; display: inline; padding: 8px; border-radius: 8px; cursor: pointer; height: auto; width: auto;" onclick="
+  resetScore();
+  " >
+    Reset Score
+</button>
+<h3 class="js-result-para"></h3>
+<p class="js-choice-para"></p>
+
   <script>
 
-</script>
+    let score = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0, 
+      loses: 0,
+      ties: 0
+    };
+    /*if (!score) {
+      score = {
+        wins: 0, 
+        loses: 0,
+        ties: 0
+      } ;     
+    }*/
+    updateScoreElemnt();
+    //updateResultElemnt();
+    //updateChoiceElemnt();
+
+    function showHide() {
+      document.getElementById('hide').style.display = 'none';
+      document.getElementById('show').style.display = 'flex';
+    }
+
+    function playGame(userChoice) {
+      let result = '';
+      let compChoice = pickComputerMove();
+      if (userChoice === compChoice) {
+        result = 'Tie!';
+        }
+        if (userChoice === 'Scissor') {
+          if (compChoice === 'Paper') {
+          result = 'Won!';
+          }
+
+          else if (compChoice === 'Rock') {
+          result = 'Lost!';
+        }
+      }
+        else if (userChoice === 'Rock') {
+          if (compChoice === 'Scissor') {
+          result = 'Won!';
+          }
+
+          else if (compChoice === 'Paper') {
+          result = 'Lost!';
+        }
+      }
+        if (userChoice === 'Paper') {
+          if (compChoice === 'Rock') {
+          result = 'Won!';
+          }
+
+          else if (compChoice === 'Scissor') {
+          result = 'Lost!';
+        }        
+      }
+
+      
+
+      result === 'Won!' ? score.wins +=1 :  result === 'Lost!' ? score.loses +=1 : score.ties +=1 ;
+
+      localStorage.setItem('score',JSON.stringify(score));
+
+      updateScoreElemnt();
+      updateResultElemnt();
+      updateChoiceElemnt();
+
+      function updateResultElemnt() {
+        document.querySelector('.js-result-para').innerHTML = result;
+      }
+      function updateChoiceElemnt() {
+        document.querySelector('.js-choice-para').innerHTML = `You chose: ${userChoice}\nComputer chose: ${compChoice}`;
+      }
+
+      console.log(`You chose: ${userChoice}\nComputer chose: ${compChoice}\nResult: ${result}\nWins:${score.wins} Losses:${score.loses} Ties:${score.ties}`);
+    }
+
+    function pickComputerMove() {
+      const randomNumber = Math.random();
+      let compChoice = '';
+      
+      if (randomNumber >= 0 && randomNumber < 1/3) {
+        compChoice = 'Rock';
+      }
+      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        compChoice = 'Paper'
+      }
+      else if (randomNumber >= 2/3 && randomNumber < 1) {
+        compChoice = 'Scissor'
+      }
+      else {
+        alert ('Computer failed to make a choice!')
+      }
+      return compChoice;
+    }
+    function resetScore() {
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      console.log(`Score Reset\nWins:${score.wins} Losses:${score.loses} Ties:${score.ties}`);
+
+      updateScoreElemnt();
+     //updateResultElemnt();
+     //updateChoiceElemnt();
+    }
+
+    function updateScoreElemnt() {
+      document.querySelector('.js-score-para').innerHTML = `Wins:${score.wins} Losses:${score.loses} Ties:${score.ties}`;
+    }
+
+  </script>
   </body>
 </html>  
