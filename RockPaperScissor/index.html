@@ -52,6 +52,12 @@
     p {
       font-size: 1.15rem;
     }
+    .result-centerer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
     .copyright,.copyright a {
         font-size: 0.85rem;
         display: flex;
@@ -171,6 +177,7 @@
   <div class="btn-container">
     <button class="rock" onclick="
     showHide();
+    showResult();
     compChoice = pickComputerMove();
 
     playGame('Rock');
@@ -180,6 +187,7 @@
 
     <button class="paper" onclick="
     showHide();
+    showResult();
     compChoice = pickComputerMove();
     playGame('Paper');
     ">
@@ -188,6 +196,7 @@
 
     <button class="scissor" onclick="
     showHide();  
+    showResult();
     compChoice=pickComputerMove();
     playGame('Scissor');
   
@@ -200,11 +209,17 @@
 
   <button class="reset-btn" style="color: white; font-size: 0.8rem; border: 1.5px solid black; display: inline; padding: 8px; border-radius: 6px; cursor: pointer; height: auto; width: auto; margin: 0;" onclick="
   resetScore();
+  hideResult();
   " >
     Reset Score
 </button>
-<h3 style="text-align: center;" class="js-result-para" id="js-result-para"></h3>
-<p style="text-align: center;" class="js-choice-para" id="js-choice-para"></p>
+
+<div class="result-centerer">
+  <h3 class="js-result-para" id="js-result-para"></h3>
+</div>
+<div class="result-centerer">
+<p class="js-choice-para" id="js-choice-para"></p>
+</div>
 
 <br><br>
 
@@ -256,6 +271,15 @@
     function showHide() {
       document.getElementById('hide').style.display = 'none';
       document.getElementById('show').style.display = 'flex';
+    }
+
+    function hideResult() {
+      document.getElementById('js-result-para').style.visibility = 'hidden';
+      document.getElementById('js-choice-para').style.visibility = 'hidden';
+    }
+    function showResult() {
+      document.getElementById('js-result-para').style.visibility = 'visible';
+      document.getElementById('js-choice-para').style.visibility = 'visible';
     }
 
     function playGame(userChoice) {
