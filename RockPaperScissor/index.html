@@ -19,8 +19,10 @@
     button {
   height: 6rem;
   width: 6rem;
+  color: white;
   border-radius: 50%;
-  background-color: #a2d2ffbf;
+  /*background-color: #a2d2ffbf;*/
+  background-color: #0079ebd9;
   cursor: pointer;
   font-size: 1rem;
   margin: 0.5rem;
@@ -39,7 +41,7 @@
     }
     button:active {
       scale: 0.9;
-      background-color: #0079ebd9;
+      background-color: #0079eb;
       color: white;
     }
     .btn-container {
@@ -76,6 +78,9 @@
     align-items: center;
     background-image: linear-gradient(#cae9ffd9 , #cae9ffd9 );
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     
   }
   .foot-panel3 a {
@@ -193,7 +198,7 @@
 
   <h4 style="text-align: center;" class="js-score-para"></h4>
 
-  <button class="reset-btn" style="font-size: 0.8rem; border: 1.5px solid black; display: inline; padding: 6px; border-radius: 6px; cursor: pointer; height: auto; width: auto; margin: 0;" onclick="
+  <button class="reset-btn" style="color: white; font-size: 0.8rem; border: 1.5px solid black; display: inline; padding: 8px; border-radius: 6px; cursor: pointer; height: auto; width: auto; margin: 0;" onclick="
   resetScore();
   " >
     Reset Score
@@ -201,16 +206,18 @@
 <h3 style="text-align: center;" class="js-result-para" id="js-result-para"></h3>
 <p style="text-align: center;" class="js-choice-para" id="js-choice-para"></p>
 
+<br><br>
 
   <footer>
     <hr class="logo-end-hr">
     <div class="foot-panel3">
       <a href="mailto:farhateservices.in@gmail.com">
-      <i class="fa-regular fa-envelope fa-beat"></i>
+      <i class="fa-regular fa-envelope fa-beat"></i></a>
+      
       <a href="https://farhateservices.github.io/fesa/contact.html#SendMessage">
         <i class="fa-regular fa-comment-dots fa-beat"></i>
       </a>
-      </a>
+
     <a href="https://farhateservices.github.io/fesa/" target="_blank"><div class="logo-end"></div></a>
   
   
@@ -227,7 +234,6 @@
         <i class="fa-regular fa-copyright"></i> &nbsp; I. Farhat |&nbsp;<img style="height: 1.25rem; width: auto;" src="https://farhateservices.github.io/fesa/logo-head-black.png" alt=""> &nbsp; Farhat e Services & Assistance
       </a>
     </p>
-  
   </footer>
   <script>
 
