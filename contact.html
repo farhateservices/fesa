@@ -822,7 +822,9 @@ background-position: 0 0,15px 15px;
   text-decoration: none;
   display: flex;
 }
-
+#contact-message {
+  resize: vertical;
+}
 </style>
 <header>
   <div class="navbar">
@@ -905,7 +907,7 @@ background-position: 0 0,15px 15px;
       <input type="text" id="contact-sub" name="contact-sub" placeholder="Subject" required maxlength="100">
   
       <label for="contact-message">Your Message:</label>
-      <textarea style="margin-bottom: 15px;" id="contact-message" name="contact-message" placeholder="Your Message" rows="5" required maxlength="500"></textarea>
+      <textarea style="margin-bottom: 15px;" id="contact-message" name="contact-message" placeholder="Your Message here...." rows="5" required maxlength="500"></textarea>
 
       <div id="attachment-fields" style="display: none; margin-top: 0; margin-bottom: 20px; ">
         <input type="url" id="attachment-link" name="contact-attachment" placeholder="Attachment Link">
